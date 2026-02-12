@@ -6,7 +6,6 @@ metadata:
     app: nginx
 spec:
   replicas: 4
->>>>>>> devlop
   selector:
     matchLabels:
       app: nginx
