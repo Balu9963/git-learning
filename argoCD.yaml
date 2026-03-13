@@ -1,3 +1,4 @@
+
 apiVersion: argoproj.io/v1alpha2
 kind: Application
 metadata:
@@ -11,4 +12,4 @@ spec:
     path: guestbook
   destination:
     server: https://kubernetes.default.svc
-    namespace: guestbook
+    namespace: guestbook1
