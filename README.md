@@ -1,2 +1,2 @@
 # git-learning
-learning purpose only
+work on MDT-2:Added install dockerfile configuration
