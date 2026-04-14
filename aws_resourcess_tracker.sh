@@ -22,3 +22,6 @@
   echo "print list of iam users"
         aws iam-users
 
+# list of vpc
+  echo "print list of vpc"
+       aws vpc 
