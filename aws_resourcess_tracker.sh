@@ -1,27 +1,29 @@
 #!/bin/bash
-# Author: Balu_DevOps_Team
-# Date:0-0-0
-# Version: v1
-# This script for aws resource tracker
-# ##################################################################
+# Author:Balu_DevOps_Team
+# Date: 0-0-26
+# Version: V1
+# This script is used for checkthe aws services at console
+###################################################################
 #
-# list s3 buckets
- echo "print list of s3 buckets"
-       aws s3 ls
-
-# list of ec2 instances
-  echo "print list of ec2_instances"
-        aws ec2 describe-instances
+#
+# list of s3 buckets
+  echo "print of s3buckets"
+        aws s3 ls
 
 
-# list of Lambda
-  echo "print  Lambda "
+# list ec2_instances
+  echo "print of Ec2_instances"
+        aws describe_instances
+
+
+# list Lambda
+  echo "print Lambda"
         aws lambda-functions
 
-# list of IAM users
-  echo "print list of iam users"
-        aws iam-users
+# list of IAM
+ echo "print list of iam-users"
+       aws iam-users
 
-# list of vpc
-  echo "print list of vpc"
-       aws vpcs 
+ # list of VPC
+   echo "print vpc"
+         aws vpc 
