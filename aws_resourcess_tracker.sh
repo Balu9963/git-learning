@@ -24,4 +24,4 @@
 
 # list of vpc
   echo "print list of vpc"
-       aws vpc 
+       aws vpcs 
