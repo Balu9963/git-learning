@@ -4,17 +4,16 @@
 #Version: V1
 #
 #Disk Allert usage script
-#############################################################!/bin/bash
-
+#############################################################
+#
 THRESHOLD=80
 
-# Get disk usage (root partition)
-USAGE=$(df -h / | awk 'NR==2 {print $5}' | sed 's/%//')
+UASGE=$(df -h / | awk NR==2 {print 5}
 
-echo "Current Disk Usage: $USAGE%"
+echo "current disk usage: $USAGE%"
 
-if [ "$USAGE" -ge "$THRESHOLD" ]; then
-    echo "⚠️ ALERT: Disk usage is above ${THRESHOLD}%"
+if["$USAGE -ge ,  $THRESHOLD%"] Then,
+echo " ALERT:Disk usage is above $ {THRESHOLD}%"
 else
-    echo "✅ Disk usage is normal"
+echo "disk normal uasagr"
 fi
