@@ -1,47 +1,45 @@
 #!/bin/bash/
-#Author: Balu_DevOps_Team
+#Authoe: balu_DevOps_Team
 #Date: 0-0-26
 #Version: V1
+#jenkinfile for CI/CD
 #
-# This is jenkinsfile for CI/CD
 #
+####################################################################################
 #
-pipeline{
-   agent any
+
+
+pipeline {
+   agentany
    stages{
-        stage('checkout'){
-         step{
-	    git 'https://github.com/balu9963/jenkinfile/org.'
-    }
-}
-
-         stage('Build'){
-	 step{
-	 sh mvn clean,compile,test,install
-    }
- }
-
-         stage('scan'){
-	 steps{
-	   'sonar-Scan>>Bugs,code quality,before go CI'
-     }
- }
-
-
-         stage('Docker Build'){
-	 step{
-	 sh 'docker build -t my-app'
-     }
-  }
-
-
-         stage('Deploy'){
-	 step{
-	 echo "deploying application"
-     
+       stage('checkout)'{
+       step{
+           git 'https://github.com/balu9963/jenkinsfile'
+          }
        }
+
+
+	 stage('Build'){
+	 step{
+	 sh 'mvn clean,compile,test,install'
+         }
+      }
+
+	  stage('scan'){
+	  step{
+	       'sonarQube-scan'
+        
+       }
+      }
+
+          stage('Docker-Build'){
+	  step{
+	  sh 'docker build -t my-app .'
+
+	  echo "deploy application"
+	}
      }
    }
  }
+}
 
-     
