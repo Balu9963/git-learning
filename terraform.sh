@@ -57,7 +57,7 @@ reagion= "us-east1"
 
 module "aws-ec2-instances"{
 resource= "./module/ec2-instance"
-count= "3"
+count= "5"
 ami= "replace this"
 instance_type= "t2.micro"
 subnet_id= "replace this"
