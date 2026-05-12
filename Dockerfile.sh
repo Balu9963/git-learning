@@ -6,7 +6,7 @@
 
 #singe_stage
 
-FROM maven: 3.9 open-jdk-17
+FROM maven: 3.8 open-jdk-17
 WORKDIR /app
 COPY ..
 RUN mvn clean package
@@ -18,10 +18,10 @@ CMD["--server.port=80"]
 #multi_stage
 
 #stage 1
-FROM maven: 3.9 open-jdk-17
+FROM maven: 3.8 open-jdk-17
 WORKDIR /app
 COPY ..
-RUN mvn clean packages
+RUN mvn clean package
 
 
 #stage 2
